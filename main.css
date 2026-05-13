@@ -123,3 +123,7 @@ footer .wr {
 .withlink {
   margin-top: 1rem;
 }
+.output-textarea {
+  width: 50rem;
+  min-height: 30rem;
+}

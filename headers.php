@@ -24,13 +24,13 @@
     <main>
       <section id="header-section">
         <div class="wr">
-            <p><?php
+            <label ><textarea class="output-textarea"><?php
 
 $url = 'http://www.example.com';
 
  print_r(get_headers($url));
 
-?></p>
+?></textarea></label>
           <p class="withlink"><a href="form.html">Вернуться к форме</a></p>
         </div>
       </section>
