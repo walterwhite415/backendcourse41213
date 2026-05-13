@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>lab1</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wr">
+        <a href="https://mospolytech.ru/">
+          <picture>
+            <img class="logo" src="logo.jpg" alt="Лого" />
+          </picture>
+        </a>
+        <h1>Домашняя работа: Feedback Form</h1>
+      </div>
+    </header>
+    <main>
+      <section id="form-section">
+        <div class="wr">
+          <form action="https://httpbin.org/post" method="post">
+            <label
+              >Имя пользователя<input type="text" name="username" required
+            /></label>
+            <label>E-mail<input type="email" name="email" required /></label>
+            <label
+              >Тип обращения
+              <select name="appeal_type" required>
+                <option value="">— выберите —</option>
+                <option value="complaint">жалоба</option>
+                <option value="suggestion">предложение</option>
+                <option value="thanks">благодарность</option>
+              </select>
+            </label>
+            <label
+              >Текст обращения<textarea name="message" required></textarea>
+            </label>
+            <p class="checks">Вариант ответа:</p>
+            <div class="checks">
+              <label
+                ><input type="checkbox" name="reply_sms" value="1" /> смс</label
+              >
+              <label
+                ><input type="checkbox" name="reply_email" value="1" />
+                e-mail</label
+              >
+            </div>
+            <button id="submitbtn" type="submit">Отправить</button>
+
+            <p class="withlink"><a href="headers.php">Страница 2</a></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wr">
+        <p>
+          Задание для самостоятельной работы «Feedback form» Собрать сайт из
+          двух страниц. 1 страница: Сверстать форму обратной связи. Отправку
+          формы осуществить на URL: https://httpbin.org/post. Добавить кнопку
+          для перехода на 2 страницу. 2 страница: вывести на страницу результат
+          работы функции get_headers. Загрузить код в удаленный репозиторий.
+          Залить на хостинг.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
