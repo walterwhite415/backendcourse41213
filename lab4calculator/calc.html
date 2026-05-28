@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="../main.css" />
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-wr">
+        <a href="../index.php">
+          <picture>
+            <img class="logo" src="../img/logo.jpg" alt="Лого" />
+          </picture>
+        </a>
+        <h1>Домашняя работа: Calculator.</h1>
+      </div>
+    </header>
+    <section>
+      <div class="wr">
+        <div class="calculator">
+          <input type="text" id="display" readonly placeholder="0" />
+
+          <div class="buttons">
+            <button onclick="pressButton('(')">(</button>
+            <button onclick="pressButton(')')">)</button>
+            <button onclick="pressButton('/')">÷</button>
+            <button onclick="pressButton('*')">×</button>
+
+            <button onclick="pressButton('7')">7</button>
+            <button onclick="pressButton('8')">8</button>
+            <button onclick="pressButton('9')">9</button>
+            <button onclick="pressButton('-')">−</button>
+
+            <button onclick="pressButton('4')">4</button>
+            <button onclick="pressButton('5')">5</button>
+            <button onclick="pressButton('6')">6</button>
+            <button onclick="pressButton('+')">+</button>
+
+            <button onclick="pressButton('1')">1</button>
+            <button onclick="pressButton('2')">2</button>
+            <button onclick="pressButton('3')">3</button>
+            <button class="btn-clear" onclick="pressClear()">C</button>
+
+            <button onclick="pressButton('0')">0</button>
+            <button onclick="pressButton('.')">.</button>
+            <button class="btn-equals" onclick="pressEquals()">=</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

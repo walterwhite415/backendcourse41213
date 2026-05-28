@@ -71,11 +71,12 @@ form {
   margin: 5rem;
   padding: 2rem;
   border-radius: 10px;
+  border: 1px solid black;
 }
 #form-section .wr {
   display: grid;
   justify-content: center;
-  background-color: var(--lightgrey);
+
   border-radius: 10px;
 }
 
@@ -116,7 +117,7 @@ footer .wr {
   padding: 2rem;
   display: grid;
   justify-content: center;
-  background-color: var(--lightgrey);
+
   border-radius: 10px;
 }
 

@@ -19,9 +19,14 @@ html {
   box-sizing: border-box;
   font-family: Montserrat;
 }
-a {
+a,
+li {
   font-size: 1.5rem;
 }
+#oop li {
+  margin-top: 2rem;
+}
+
 *,
 *::before,
 *::after {

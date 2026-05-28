@@ -21,7 +21,11 @@
     <main>
       <section>
         <div class="wr">
+          <?php
+          $time = date('H:i:s');
+          ?>
           <p><?='Hello, world!'?></p>
+          <p ><span id="clock"><?= $time ?></span></p>
         </div>
       </section>
       <section id="links">
@@ -33,11 +37,11 @@
 
       <ul>
         <li>
-          <a href="#">2.1. Домашняя работа: Hello, World!</a>
+          <a href="#">1. Hello, World!</a>
         </li>
 
         <li>
-          <a href="41feedbackform/form.html">4.1. Домашняя работа: Feedback Form.</a>
+          <a href="lab2feedbackform/form.html">2. Feedback Form.</a>
         </li>
       </ul>
     </li>
@@ -47,16 +51,24 @@
 
       <ul>
         <li>
-          <a href="12solvetheequation/h.php">1.2. Домашняя работа: Solve the equation.</a>
+          <a href="lab3solvetheequation/h.php">3. Solve the equation.</a>
         </li>
 
         <li>
-          <a href="22calculator/h.html">2.2. Домашняя работа: Calculator.</a>
+          <a href="lab4calculator/calc.html">4. Calculator.</a>
         </li>
 
         <li>
-          <a href="#">5.1. Домашняя работа: "Notebook"</a>
+          <a href="lab5notebook/index.php">5. Notebook</a>
         </li>
+        <li>
+          <a href="lab6oop/abstclasses.php">6. OOP<a>
+        </li>
+        <li>
+          <a href="lab7routing/myproject/www/index.php">7. <a>
+        </li>
+     
+    
       </ul>
     </li>
 
@@ -65,7 +77,18 @@
       
       </section>
     </main>
-    <footer>
-      <div class="wr">задание для самостоятельной работы</div></footer>
+
+      <script>
+let date = new Date("<?= date('Y-m-d H:i:s') ?>");
+
+function updateClock() {
+  date.setSeconds(date.getSeconds() + 1);
+
+  document.getElementById('clock').textContent =
+    date.toLocaleTimeString('ru-RU');
+}
+
+setInterval(updateClock, 1000);
+</script>
   </body>
 </html>
