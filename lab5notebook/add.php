@@ -6,7 +6,7 @@ $row = [];
 
 $button = "Добавить";
 
-if ($_POST) {
+if ($_POST) { //если форма отправлена
 
     $query = "
     INSERT INTO contacts
@@ -55,5 +55,5 @@ if ($_POST) {
     }
 }
 
-require 'form.php';
+require 'form.php'; //подключение формы
 ?>

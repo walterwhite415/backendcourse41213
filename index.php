@@ -24,7 +24,7 @@
           <?php
           $time = date('H:i:s');
           ?>
-          <p><?='Hello, world!'?></p>
+          <p style="font-size:10rem"><?='Hello, world!'?></p>
           <p ><span id="clock"><?= $time ?></span></p>
         </div>
       </section>
@@ -64,11 +64,22 @@
         <li>
           <a href="lab6oop/abstclasses.php">6. OOP<a>
         </li>
-        <li>
-          <a href="lab7routing/myproject/www/index.php">7. <a>
-        </li>
+      
      
     
+      </ul>
+    </li>
+    <li class="topic">
+      
+      <h2>Тема 3. Framework на языке PHP</h2>
+      <ul>
+         <li>
+          <a href="lab7routing/myproject/www/index.php">7-10. Routing, Page Presentation, Query, Editing<a>
+        </li>
+
+        <li>
+          <a href="adsboard/www/index.php">Курсовая<a>
+        </li>
       </ul>
     </li>
 

@@ -11,7 +11,7 @@ $list = mysqli_query(
     "SELECT * FROM contacts ORDER BY surname,name"
 );
 
-while ($item = mysqli_fetch_assoc($list)) {
+while ($item = mysqli_fetch_assoc($list)) { //вывод списка элементов слева
 
     $class = ($item['id'] == $id)
         ? "style='color:red'"

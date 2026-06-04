@@ -1,9 +1,13 @@
 <?php
 
+session_start();
+
 spl_autoload_register(function (string $className) {
     require_once __DIR__ . '/../src/' . str_replace('\\', '/', $className) . '.php';
 });
-define('BASE_PATH', '/site/lab7routing/myproject/www');
+
+define('BASE_PATH', '/site/adsboard/www/');
+
 $route = $_GET['route'] ?? '';
 $routes = require __DIR__ . '/../src/routes.php';
 

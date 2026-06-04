@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = mysqli_connect(
+$mysqli = mysqli_connect( //подключение к бд
     "localhost",
     "root",
     "",

@@ -1,12 +1,12 @@
 <?php
  
-error_reporting(0);
-ini_set('display_errors', 0);
+error_reporting(0); //отключает вывод ошибок php на экран
+ini_set('display_errors', 0); 
 header('Content-Type: application/json; charset=utf-8');
  
-$expression = str_replace(' ', '', $_POST['expression']);
+$expression = str_replace(' ', '', $_POST['expression']); //убирает пробелы из ввода
  
-if (!bracketsAreBalanced($expression)) {
+if (!bracketsAreBalanced($expression)) { 
     echo json_encode(['result' => 'Ошибка']);
     exit;
 }
@@ -23,7 +23,7 @@ try {
 exit;
  
  
-function bracketsAreBalanced(string $expr): bool
+function bracketsAreBalanced(string $expr): bool //проверка правильности расстановки скобок
 {
     $depth = 0;
     for ($i = 0; $i < strlen($expr); $i++) {
@@ -34,7 +34,7 @@ function bracketsAreBalanced(string $expr): bool
     return $depth === 0;
 }
  
-function parseExpression(string $expr, int &$pos): float
+function parseExpression(string $expr, int &$pos): float //сложение и вычитание
 {$value = parseTerm($expr, $pos);
  
     while ($pos < strlen($expr) && ($expr[$pos] === '+' || $expr[$pos] === '-')) {
@@ -45,7 +45,7 @@ function parseExpression(string $expr, int &$pos): float
     return $value;
 }
  
-function parseTerm(string $expr, int &$pos): float
+function parseTerm(string $expr, int &$pos): float //умножение и деление
 {$value = parseFactor($expr, $pos);
  
     while ($pos < strlen($expr) && ($expr[$pos] === '*' || $expr[$pos] === '/')) {
@@ -57,7 +57,7 @@ function parseTerm(string $expr, int &$pos): float
     return $value;
 }
  
-function parseFactor(string $expr, int &$pos): float
+function parseFactor(string $expr, int &$pos): float //число или скобки
 {
     $negative = false;
     if ($pos < strlen($expr) && $expr[$pos] === '-') {

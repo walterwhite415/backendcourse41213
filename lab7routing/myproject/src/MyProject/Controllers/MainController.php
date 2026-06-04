@@ -2,22 +2,34 @@
 
 namespace MyProject\Controllers;
 
-use MyProject\View;
+use MyProject\Models\Articles\Article;
+use MyProject\View\View;
 
 class MainController
 {
+    private $view;
+
+    public function __construct()
+    {
+        $this->view = new View(__DIR__ . '/../../../templates');
+    }
+
     public function main()
     {
-        View::render('<h1>Главная страница</h1>');
+        $articles = Article::findAll();
+        $this->view->renderHtml('main/main.php', ['articles' => $articles]);
     }
 
     public function sayHello(string $name)
     {
-        View::render('<h1>Привет, ' . htmlspecialchars($name) . '</h1>', 'Страница приветствия');
+        $this->view->renderHtml('main/hello.php', [
+            'name'  => $name,
+            'title' => 'Страница приветствия',
+        ]);
     }
 
     public function sayBye(string $name)
     {
-        View::render('<h1>Пока, ' . htmlspecialchars($name) . '</h1>');
+        $this->view->renderHtml('main/bye.php', ['name' => $name]);
     }
 }
